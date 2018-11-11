@@ -1,0 +1,38 @@
+﻿<Window x:Class="ftpMassUpgrade.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ftpMassUpgrade"       
+        mc:Ignorable="d"
+        Title="TeSysT Mass Upgrade--- V5.0" Height="808.177" Width="1278.998" FontSize="15" >
+
+
+    <Grid x:Name="mainWin"  RenderTransformOrigin="0.498,0.515" VerticalAlignment="Top"  Background="LightGreen" HorizontalAlignment="Left" Height="993" Width="1656" Margin="0,2,-385,-3">
+        <GridSplitter HorizontalAlignment="Left" Margin="118,47,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="grdDeviceList" Background="AliceBlue" HorizontalAlignment="Left" Margin="684,21,0,0" VerticalAlignment="Top" Height="652" Width="542" Visibility="Visible" Focusable="False" FrozenColumnCount="3" GridLinesVisibility="Vertical" />
+        <Button x:Name="btUpgrade" Content="LTMR Upgrade" HorizontalAlignment="Left" Height="68" Margin="348,394,0,0" VerticalAlignment="Top" Width="280" FontSize="24" Click="btUpgrade_Click"/>
+        <Button x:Name="btTest" Content="Close" HorizontalAlignment="Left" Margin="1105,682,0,0" VerticalAlignment="Top" Width="121" Click="btTest_Click" Height="45" FontSize="20"/>
+        <Button x:Name="btBackup" Content="LTMR Backup &amp; Restore" HorizontalAlignment="Left" Margin="50,394,0,0" VerticalAlignment="Top" Width="280" FontSize="24" Click="btBackup_Click" Height="68"/>
+        <GroupBox x:Name="grpList" Header="Network Scan" HorizontalAlignment="Left" Margin="35,13,0,0" VerticalAlignment="Top" FontSize="20" Height="321" Width="624"/>
+        <GroupBox x:Name="grpConfi" Header="Device Managment" HorizontalAlignment="Left" Margin="35,354,0,0" VerticalAlignment="Top" FontSize="20" Height="148" Width="625"/>
+        <Button x:Name="btTestProgrssBar" Content="TestPB" HorizontalAlignment="Left" Margin="684,682,0,0" VerticalAlignment="Top" Width="102" Click="btTestProgrssBar_Click" Height="45" FontSize="20"/>
+        <Label Content="Local Interface" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="226" FontSize="24" Margin="51,47,0,0"/>
+        <Label x:Name="lbIPAddress" Content="Local IPAddress" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="193" FontSize="24" Margin="435,47,0,0"/>
+        <ComboBox x:Name="cbIPAddress" HorizontalAlignment="Left" VerticalAlignment="Top" Width="196" Height="38" SelectionChanged="cbIPAddress_SelectionChanged" Margin="432,90,0,0"/>
+        <ComboBox x:Name="cbInterface" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="225" SelectionChanged="cbInterface_SelectionChanged" MouseDoubleClick
+="cbInterface_MouseDoubleClick" Margin="51,90,0,0"/>
+        <TextBox x:Name="txtIPStart" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Margin="51,177,0,0"/>
+        <TextBox x:Name="txtIPRange" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Margin="432,178,0,0"/>
+        <Button x:Name="btScan" Content="Scan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="136" Height="38" Click="btScan_Click" FontSize="24" Margin="492,276,0,0" IsEnabled="False"/>
+        <Label x:Name="lbIPAddress_Copy" Content="Start Address" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="226" FontSize="24" Margin="50,132,0,0"/>
+        <Label x:Name="lbIPAddress_Copy1" Content="Range" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="193" FontSize="24" Margin="435,132,0,0"/>
+        <ProgressBar x:Name="pbScanning" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="577" Margin="51,235,0,0" />
+        <Label x:Name="lbIConStatus" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="226" Background="AliceBlue" Height="38" Margin="51,276,0,0"/>
+        <Button x:Name="btMBAccess" Content="Modbus Register Access" HorizontalAlignment="Left" Margin="50,568,0,0" VerticalAlignment="Top" Width="280" Height="67" FontSize="24" Click="btMbAccess_Click"/>
+        <GroupBox x:Name="grpMbAccess" Header="Modbus Register Access" HorizontalAlignment="Left" Margin="35,525,0,0" VerticalAlignment="Top" FontSize="20" Height="148" Width="625"/>
+
+    </Grid>
+
+
+</Window>

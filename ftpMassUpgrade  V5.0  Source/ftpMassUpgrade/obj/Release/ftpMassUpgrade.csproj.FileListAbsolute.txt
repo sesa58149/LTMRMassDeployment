@@ -1,0 +1,41 @@
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\bin\Release\ftpMassUpgrade.exe.config
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\bin\Release\ftpMassUpgrade.exe
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\bin\Release\ftpMassUpgrade.pdb
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\MainWindow.g.cs
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\App.g.cs
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade_MarkupCompile.cache
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade_MarkupCompile.lref
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\MainWindow.baml
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade.g.resources
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade.Properties.Resources.resources
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade.csproj.GenerateResource.Cache
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade.exe
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade.pdb
+c:\users\sesa58149\documents\visual studio 2015\Projects\ftpMassUpgrade\ftpMassUpgrade\obj\Release\ftpMassUpgrade.csprojResolveAssemblyReference.cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\bin\Release\ftpMassUpgrade.exe.config
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\bin\Release\ftpMassUpgrade.exe
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\bin\Release\ftpMassUpgrade.pdb
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\bin\Release\ExcelDataReader.DataSet.dll
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\bin\Release\ExcelDataReader.dll
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\bin\Release\ExcelDataReader.xml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\bin\Release\ExcelDataReader.DataSet.xml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade.csprojResolveAssemblyReference.cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade.csproj.ResolveComReference.cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\backupRestore.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\MainWindow.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\mbWriteWin.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ModbusAccess.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\Upgrade.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\App.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade_MarkupCompile.cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade_MarkupCompile.lref
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\backupRestore.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\MainWindow.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\mbWriteWin.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ModbusAccess.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\Upgrade.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade.g.resources
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade.Properties.Resources.resources
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade.csproj.GenerateResource.Cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade.exe
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\ftpMassUpgrade  V5.0 Upgrade Refactor\ftpMassUpgrade\obj\Release\ftpMassUpgrade.pdb
