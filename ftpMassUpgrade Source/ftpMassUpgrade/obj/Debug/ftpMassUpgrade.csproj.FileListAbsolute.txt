@@ -105,3 +105,30 @@ C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\
 C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\ftpMassUpgrade  V5.0  Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.g.resources
 C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\ftpMassUpgrade  V5.0  Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.Properties.Resources.resources
 C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\ftpMassUpgrade  V5.0  Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.csproj.GenerateResource.Cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\bin\Debug\ftpMassUpgrade.exe.config
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\bin\Debug\ftpMassUpgrade.exe
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\bin\Debug\ftpMassUpgrade.pdb
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\bin\Debug\ExcelDataReader.dll
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\bin\Debug\ExcelDataReader.xml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.csprojResolveAssemblyReference.cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.csproj.ResolveComReference.cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\backupRestore.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\MainWindow.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\mbWriteWin.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ModbusAccess.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\Upgrade.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\App.g.cs
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade_MarkupCompile.cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade_MarkupCompile.lref
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\backupRestore.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\MainWindow.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\mbWriteWin.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ModbusAccess.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\Upgrade.baml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.g.resources
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.Properties.Resources.resources
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.csproj.GenerateResource.Cache
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.exe
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\ftpMassUpgrade.pdb

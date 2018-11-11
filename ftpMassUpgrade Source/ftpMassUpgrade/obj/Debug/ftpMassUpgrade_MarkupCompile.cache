@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\ftpMassUpgrade  V5.0  Source\ftpMassUpgrade\obj\Debug\
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\obj\Debug\
 ftpMassUpgrade
 none
 false
 DEBUG;TRACE
-C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\ftpMassUpgrade  V5.0  Source\ftpMassUpgrade\App.xaml
+C:\Users\sesa58149\Documents\Visual Studio 2015\Projects\Mass TeSysT Deployment\LTMRToolDev\ftpMassUpgrade Source\ftpMassUpgrade\App.xaml
 51383355610
 
 22-1201844193
-191017361791
+191320963297
 backupRestore.xaml;MainWindow.xaml;mbWriteWin.xaml;ModbusAccess.xaml;Upgrade.xaml;
 
 False

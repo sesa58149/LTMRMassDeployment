@@ -47,15 +47,19 @@ namespace ftpMassUpgrade
     /// </summary>
     public partial class ModbusAccess : Window
     {
+        const int listSize = 64;
         mbTCP mbClient = new mbTCP();
         toolUitility utility = new toolUitility();
-        static ushort rgdIndex = 0;
+        static int rgdIndex = 0;
         ModbusRegisterAccess mrAccess { get; set; }
         public object ExcelReaderFactory { get; private set; }
         public modbusReadReq [] readReqArray = new modbusReadReq[32];
+        public int nRequestInArray = 0;
         string srcFileName = " ";
         string srcFilePath = " ";
         MainWindow mWin;
+        public deviceEntry[] deviceList = new deviceEntry[listSize];
+        public int nDevice = 0;
         public ModbusAccess()
         {
             InitializeComponent();
@@ -79,8 +83,7 @@ namespace ftpMassUpgrade
             grdModbus.Columns.Add(col2);
 
             mrAccess = new ModbusRegisterAccess();
-            chReqInput.IsChecked = false;
-
+            
             txtFileName.Visibility = Visibility.Hidden;
             btBrowse.Visibility = Visibility.Hidden;
 
@@ -91,15 +94,44 @@ namespace ftpMassUpgrade
             mWin = new MainWindow();
 
         }
-        public void setReferenceOfMainWindow(MainWindow mW)
+        public int getDeviceListSize()
+        {
+            return listSize;
+        }
+        private void btSaveAll_Click(object sender, RoutedEventArgs e)
+        {
+            modbusResponseGrid MrGrid = new modbusResponseGrid();
+            btSaveAll.IsEnabled = false;
+
+            int lstCnt = grdModbus.Items.Count;
+            StreamWriter confFile = new StreamWriter("MBResponse.csv");
+            // write Header
+            confFile.Write("Register Address" + ";" + " Value in Decimal" + ";" + "Value in Hex" + " \n");
+
+            for ( int i=0; i< lstCnt; i++)
+            {
+                MrGrid = (modbusResponseGrid)grdModbus.Items.GetItemAt(i);
+                
+                try
+                {                       
+                    confFile.Write(MrGrid.regAdd + ";" + MrGrid.val + ";" + MrGrid.valHex +" \n");                                    
+                }
+                catch (excepetion ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }                               
+            }
+            confFile.Close();
+            btSaveAll.IsEnabled = true;
+            MessageBox.Show(" data grid saved in .csv file in parenet folder of exe file ");
+        }
+    public void setReferenceOfMainWindow(MainWindow mW)
         {
             mWin = mW;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            mWin.Show();
+        {            
             this.Close();
-
         }
         private void handleModbusReadRequest(ushort startAdd, ushort nReg, ushort []rxBuf)
         {
@@ -153,13 +185,12 @@ namespace ftpMassUpgrade
             }
         }
 
-        private void btSendModbus_Click(object sender, RoutedEventArgs e)
+        private void singleDeviceModbusRequest()
         {
-            
             ushort[] rxBuf = new ushort[250];
             if (utility.validateIPAddress(txtSlaveIP.Text) == false)
                 return;
-            if(txtNReg.Text==" ")
+            if (txtNReg.Text == " ")
             {
                 Console.WriteLine("Number of register must be in range of 1 to 120");
                 return;
@@ -176,7 +207,9 @@ namespace ftpMassUpgrade
             mrAccess.setSlaveInfo(slaveInfo);
             try
             {
-                if (chReqInput.IsChecked == false)
+                btSendModbus.IsEnabled = false;
+
+                if (rdFromFile.IsChecked == false)
                 {
                     ushort startAdd = Convert.ToUInt16(txtStartAddress.Text);
                     ushort nReg = Convert.ToUInt16(txtNReg.Text);
@@ -184,28 +217,92 @@ namespace ftpMassUpgrade
                 }
                 else
                 {
-                    int nRequest = readMBReqFromExcel();
-                    if(nRequest>=0)
+
+                    if (nRequestInArray >= 0)
                     {
-                        for (int i=0;i<nRequest-1;i++)
+                        for (int i = 0; i < nRequestInArray - 1; i++)
                         {
                             handleModbusReadRequest(readReqArray[i].regAdd, readReqArray[i].nReg, rxBuf);
                         }
                     }
-                     else
+                    else
                     {
                         Console.WriteLine("Fail to read Modbus request from Excel file");
                     }
                 }
+                btSendModbus.IsEnabled = true;
 
-                
             }
-            catch(excepetion ex )
+            catch (excepetion ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
+        }
 
+        private void multipleDeviceModbusRequest()
+        {
+            ushort[] rxBuf = new ushort[250];
+
+            if(nDevice <= 0)
+            {
+                Console.WriteLine("no device presented in list");
+                return;
+            }
+            btSendModbus.IsEnabled = false;
+
+            for (int dCnt = 0; dCnt < nDevice; dCnt++)
+            {
+
+                modbusSlaveInfo slaveInfo = new modbusSlaveInfo();
+                slaveInfo.slaveIPAdd = deviceList[dCnt].deviceIP;
+                slaveInfo.tcpPortId = 502;
+                slaveInfo.slaveUid = 1;
+                mrAccess.setSlaveInfo(slaveInfo);
+                try
+                {
+                    
+
+                    if (rdFromFile.IsChecked == false)
+                    {
+                        ushort startAdd = Convert.ToUInt16(txtStartAddress.Text);
+                        ushort nReg = Convert.ToUInt16(txtNReg.Text);
+                        handleModbusReadRequest(startAdd, nReg, rxBuf);
+                    }
+                    else
+                    {
+
+                        if (nRequestInArray >= 0)
+                        {
+                            for (int i = 0; i < nRequestInArray - 1; i++)
+                            {
+                                handleModbusReadRequest(readReqArray[i].regAdd, readReqArray[i].nReg, rxBuf);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Fail to read Modbus request from Excel file");
+                        }
+                    }            
+
+                }
+                catch (excepetion ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            btSendModbus.IsEnabled = true;
+        }
+        private void btSendModbus_Click(object sender, RoutedEventArgs e)
+        {
+            if(rdAll.IsChecked==true)
+            {
+                multipleDeviceModbusRequest();
+            }
+            else
+            {
+                singleDeviceModbusRequest();
+            }
         }
        
         private int readMBReqFromExcel()
@@ -352,6 +449,7 @@ namespace ftpMassUpgrade
             dlg.Filter = "Excel doc (.xls)|*.xlsx";
             try
             {
+                btBrowse.IsEnabled = false;
                 if (dlg.ShowDialog() == true)
                 {
                     string filePath = dlg.FileName;
@@ -363,56 +461,13 @@ namespace ftpMassUpgrade
                     srcFileName = fileName;
 
                 }
-                StreamReader confFile = new StreamReader(srcFilePath);
-                //read header line not data from this line
-                string strLine = confFile.ReadLine();               
+                nRequestInArray = readMBReqFromExcel();
+                btBrowse.IsEnabled = true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-        }
-
-        private void btOpenExcel_Click(object sender, RoutedEventArgs e)
-        {
-            Excel.Application xlApp;
-            Excel.Workbook xlWorkBook;
-            Excel.Worksheet xlWorkSheet;
-            Excel.Range range;
-
-            string str;
-            double rAdd,nReg;
-
-            int rCnt;
-            int cCnt;
-            int rw = 0;
-            int cl = 0;
-
-            xlApp = new Excel.Application();
-            xlWorkBook = xlApp.Workbooks.Open(srcFilePath, 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-            range = xlWorkSheet.UsedRange;
-            rw = range.Rows.Count;
-            cl = range.Columns.Count;
-
-
-            for (rCnt = 1; rCnt <= rw; rCnt++)
-            {
-                for (cCnt = 1; cCnt <= cl; cCnt++)
-                {
-                    //str = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value;
-                    rAdd =  (range.Cells[rCnt, cCnt] as Excel.Range).Value;
-                    MessageBox.Show(rAdd.ToString());
-                }
-            }
-
-            xlWorkBook.Close(true, null, null);
-            xlApp.Quit();
-
-            Marshal.ReleaseComObject(xlWorkSheet);
-            Marshal.ReleaseComObject(xlWorkBook);
-            Marshal.ReleaseComObject(xlApp);
         }
 
         private void handleDGChnage_DBClick(object sender, MouseButtonEventArgs e)
@@ -431,6 +486,43 @@ namespace ftpMassUpgrade
                 win2.Show();
             }
         }
+
+        private void rdAll_Selected(object sender, RoutedEventArgs e)
+        {
+            lblSlaveIP.Visibility = Visibility.Hidden;
+            txtSlaveIP.Visibility = Visibility.Hidden;
+
+        }
+        private void rdInd_Selected(object sender, RoutedEventArgs e)
+        {
+            lblSlaveIP.Visibility = Visibility.Visible;
+            txtSlaveIP.Visibility = Visibility.Visible;
+        }
+
+        private void rdFromFile_Selected(object sender, RoutedEventArgs e)
+        {
+            txtFileName.Visibility = Visibility.Visible;
+            btBrowse.Visibility = Visibility.Visible;
+
+            txtStartAddress.Visibility = Visibility.Hidden;
+            lblStartAddress.Visibility = Visibility.Hidden;
+            txtNReg.Visibility = Visibility.Hidden;
+            lblNReg.Visibility = Visibility.Hidden;
+
+        }
+
+        private void rdMbAdd_Selected(object sender, RoutedEventArgs e)
+        {
+            txtFileName.Visibility = Visibility.Hidden;
+            btBrowse.Visibility = Visibility.Hidden;
+
+            txtStartAddress.Visibility = Visibility.Visible;
+            lblStartAddress.Visibility = Visibility.Visible;
+            txtNReg.Visibility = Visibility.Visible;
+            lblNReg.Visibility = Visibility.Visible;
+        }
+
+       
     }// class end
 
     [Serializable]

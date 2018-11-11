@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ftpMassUpgrade"
         mc:Ignorable="d"
-        Title="backupRestoreWin" Height="754.659" Width="731.079" Background="LightGreen">
+        Title="backupRestoreWin" Height="754.659" Width="731.079" Background="#FF158597">
     <Grid Margin="0,0,-34,-6">
+        <GroupBox x:Name="grpAction" Header="Action" HorizontalAlignment="Left" Margin="10,626,0,0" VerticalAlignment="Top" Height="86" Width="382" FontSize="20"/>
+
+        <GroupBox x:Name="grpProgress" Header="Activity Progress" HorizontalAlignment="Left" Margin="429,475,0,0" VerticalAlignment="Top" Height="100" Width="272" FontSize="20"/>
+        <GroupBox x:Name="grpComp" Header="Config Compatibility check" HorizontalAlignment="Left" Margin="429,208,0,0" VerticalAlignment="Top" Height="130" Width="272" FontSize="20" IsEnabled="False"/>
+        <GroupBox x:Name="grpFileSel" Header="Configuration Files " HorizontalAlignment="Left" Margin="429,34,0,0" VerticalAlignment="Top" Height="145" Width="272" FontSize="20" IsEnabled="False"/>
         <DataGrid x:Name="grdBnRDeviceList" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="581" Width="382"/>
         <Button x:Name="btClose" Content="Close Window" HorizontalAlignment="Left" Margin="563,606,0,0" VerticalAlignment="Top" Width="88" Click="btClose_Click"/>
         <Grid Margin="10,656,302,13">
@@ -21,9 +26,9 @@
         <Button x:Name="btRef8Amp" Content="8AMP Browse" HorizontalAlignment="Left" Width="96" Click="btRef8Amp_Click" Height="20" VerticalAlignment="Bottom" Margin="581,0,0,639"/>
         <Button x:Name="btRef27Amp" Content="27AMP Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Click="btRef27Amp_Click" Margin="581,104,0,0"/>
         <Button x:Name="btRef100Amp" Content="100AMP Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Click="btRef100Amp_Click" Margin="581,141,0,0"/>
-        <TextBox x:Name="txtRef8Amp" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="439,71,0,0"/>
-        <TextBox x:Name="txtRef27Amp" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="439,104,0,0"/>
-        <TextBox x:Name="txtRef100Amp" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="439,138,0,0"/>
+        <TextBox x:Name="txtRef8Amp" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="439,71,0,0" Background="#FFCDCFD1"/>
+        <TextBox x:Name="txtRef27Amp" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="439,104,0,0" Background="#FFCDCFD1"/>
+        <TextBox x:Name="txtRef100Amp" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="439,138,0,0" Background="#FFCDCFD1"/>
         <Button x:Name="btStart" Content="Start" HorizontalAlignment="Left" Margin="413,606,0,0" VerticalAlignment="Top" Width="75" Click="btStart_Click"/>
         <ProgressBar x:Name="pbBnR" HorizontalAlignment="Left" Height="19" Margin="439,541,0,0" VerticalAlignment="Top" Width="236"/>
         <Label x:Name="lblDeviceId" Content="" HorizontalAlignment="Left" Foreground="Green" Margin="439,507,0,0" VerticalAlignment="Top" Width="223"/>
@@ -31,10 +36,6 @@
         <CheckBox x:Name="chKuVer" Content="KU Ver" HorizontalAlignment="Left" Margin="557,270,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="chKCVer" Content="KC Ver" HorizontalAlignment="Left" Margin="479,270,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="chSerialN" Content="Serial Number" HorizontalAlignment="Left" Margin="437,305,0,0" VerticalAlignment="Top"/>
-        <GroupBox x:Name="grpFileSel" Header="Configuration Files " HorizontalAlignment="Left" Margin="429,34,0,0" VerticalAlignment="Top" Height="145" Width="272" FontSize="20" IsEnabled="False"/>
-        <GroupBox x:Name="grpComp" Header="Config Compatibility check" HorizontalAlignment="Left" Margin="429,208,0,0" VerticalAlignment="Top" Height="130" Width="272" FontSize="20" IsEnabled="False"/>
-        <GroupBox x:Name="grpProgress" Header="Activity Progress" HorizontalAlignment="Left" Margin="429,475,0,0" VerticalAlignment="Top" Height="100" Width="272" FontSize="20"/>
-        <GroupBox x:Name="grpAction" Header="Action" HorizontalAlignment="Left" Margin="10,626,0,0" VerticalAlignment="Top" Height="86" Width="382" FontSize="20"/>
 
     </Grid>
 </Window>

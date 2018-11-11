@@ -5,26 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ftpMassUpgrade"
         mc:Ignorable="d"
-        Title="ModbusAccess" Height="592.008" Width="597.541">
+        Title="ModbusAccess" Height="666.947" Width="800" Background="#FF158597">
     <Grid Margin="0,0,-8,-9" RenderTransformOrigin="0.527,0.527">
-        <Button x:Name="btMainBkWindow" Content="&lt;&lt; MainWindow" HorizontalAlignment="Left" Margin="10,424,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click"/>
-        <TextBox x:Name="txtSlaveIP" HorizontalAlignment="Left" Height="27" Margin="87,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtStartAddress" HorizontalAlignment="Left" Height="27" Margin="113,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
-        <Label Content="SlaveIP" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="60" Height="27"/>
-        <Label Content="Start Address" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Width="98" Height="27"/>
-        <TextBox x:Name="txtNReg" HorizontalAlignment="Left" Height="27" Margin="113,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
-        <Label Content="Registers" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="98" Height="27"/>
-        <Button x:Name="btSendModbus" Content="SendModbus" HorizontalAlignment="Left" Margin="113,258,0,0" VerticalAlignment="Top" Width="86" Click="btSendModbus_Click"/>
-        <DataGrid x:Name="grdModbus"  AutoGenerateColumns="False"  HorizontalAlignment="Left" Margin="222,33,0,0" VerticalAlignment="Top" Height="454" Width="356" Background="LightGreen" FontFamily="Segoe UI Black" MouseDoubleClick="handleDGChnage_DBClick"/>
+        <GroupBox x:Name="grpCmd" Header="Modbus Command" HorizontalAlignment="Left" Margin="17,156,0,0" VerticalAlignment="Top" Height="97" Width="399" BorderBrush="#FF55520C" BorderThickness="3" FontSize="25" FontWeight="Bold" FontStyle="Italic"/>
+        <Grid Margin="14,253,384,80">
 
+            <GroupBox Header="Query From" HorizontalAlignment="Left" VerticalAlignment="Top" Width="402" Height="312" FontSize="25" FontWeight="Bold" FontStyle="Italic" BorderBrush="#FF55520C" BorderThickness="3"/>
 
-        <Button x:Name="btDGClear" Content="ClearAll" HorizontalAlignment="Left" Margin="503,492,0,0" VerticalAlignment="Top" Width="75" Click="btDGClear_Click"/>
-        <Button x:Name="btAdd" Content="Add" HorizontalAlignment="Left" Margin="99,370,0,0" VerticalAlignment="Top" Width="75" Click="btAdd_Click"/>
-        <Button x:Name="btBrowse" Content="Browse" HorizontalAlignment="Left" Margin="124,188,0,0" VerticalAlignment="Top" Width="75" Click="btBrowse_Click" />
-        <Label x:Name="lblMBException" Content="" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" Width="197" Height="55"/>
-        <CheckBox x:Name="chReqInput" Content="Request From File" HorizontalAlignment="Left" Margin="17,145,0,0" VerticalAlignment="Top" Checked="chReqInput_Checked" Unchecked="chReqInput_unChecked" />
-        <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="23" Margin="17,185,0,0" TextWrapping="Wrap" Text=".xls" VerticalAlignment="Top" Width="91"/>
-        <Button x:Name="btOpenExcel" Content="Open" HorizontalAlignment="Left" Margin="108,512,0,0" VerticalAlignment="Top" Width="75" Click="btOpenExcel_Click"/>
+        </Grid>
+
+        <Button x:Name="btMainBkWindow" Content="Close" HorizontalAlignment="Left" Margin="10,575,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click" Height="39" FontSize="20" FontStyle="Italic"/>
+        <Button x:Name="btSendModbus" Content="Send Request" HorizontalAlignment="Left" Margin="131,575,0,0" VerticalAlignment="Top" Width="285" Click="btSendModbus_Click" Height="39" BorderThickness="2" FontSize="20" FontStyle="Italic" FontWeight="Bold"/>
+        <DataGrid x:Name="grdModbus"  AutoGenerateColumns="False"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="535" Width="307" Background="#FFCDCFD1" FontFamily="Segoe UI Black" MouseDoubleClick="handleDGChnage_DBClick" Margin="438,35,0,0" BorderBrush="#FF55520C" BorderThickness="2"/>
+        <Button x:Name="btDGClear" Content="ClearAll" HorizontalAlignment="Left" VerticalAlignment="Top" Width="127" Click="btDGClear_Click" FontSize="20" FontWeight="Bold" FontStyle="Italic" Height="39" Margin="617,575,0,0"/>
+        <Button x:Name="btSaveAll" Content="Save All" HorizontalAlignment="Left" VerticalAlignment="Top" Width="127" Click="btSaveAll_Click" FontSize="20" FontWeight="Bold" FontStyle="Italic" Height="39" Margin="438,575,0,0"/>
+        <RadioButton x:Name="rdFromFile" Content="From File" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="rdFromFile_Selected" IsChecked="False" Margin="53,456,0,0" />
+        <TextBox x:Name="txtStartAddress" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Background="#FFCDCFD1" Margin="217,340,0,0"/>
+        <Label x:Name="lblStartAddress" Content="Start Address" FontSize="15"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Height="27" Margin="93,337,0,0" />
+        <TextBox x:Name="txtNReg" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Background="#FFCDCFD1" Margin="217,372,0,0"/>
+        <Label x:Name="lblNReg" Content="Registers" FontSize="15"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="107" Height="32" Margin="93,366,0,0"/>
+        <Button x:Name="btBrowse" Content="Browse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Click="btBrowse_Click"  Margin="265,498,0,0"  />
+        <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text=".xls" VerticalAlignment="Top" Width="93" Background="#FFCDCFD1" Margin="93,499,0,0" />
+        <RadioButton x:Name="rdMbAdd" Content="Modbus Address" FontSize="15"  HorizontalAlignment="Left" VerticalAlignment="Top" Checked="rdMbAdd_Selected" Width="141" IsChecked="True" Margin="53,304,0,0"/>
+        <Label x:Name="lblMBException" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Height="29" Margin="217,456,0,0"/>
+        <TextBox x:Name="txtValue" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" Background="#FFCDCFD1" Margin="217,408,0,0"/>
+        <Label Content="Value" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Margin="93,406,0,0"/>
+        <GroupBox Header="Request Type" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" FontSize="25" FontStyle="Italic" FontWeight="Bold" Width="402" BorderThickness="3" BorderBrush="#FF55520C" Margin="14,14,0,0"/>
+        <Grid Margin="50,61,409,491">
+            <TextBox x:Name="txtSlaveIP" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.514,1.083" Margin="148,39,0,0" Background="#FFCDCFD1" />
+            <Label x:Name="lblSlaveIP"   HorizontalAlignment="Left" FontSize="15"  Content="ServerIP" VerticalAlignment="Top" Width="78" Height="29" Margin="0,30,0,0" />
+            <RadioButton x:Name="rdAll" Content="All" HorizontalAlignment="Left" FontSize="15" VerticalAlignment="Top" IsChecked="True" Checked="rdAll_Selected" Margin="3,0,0,0"/>
+            <RadioButton x:Name="rdInd" Content="Individual" HorizontalAlignment="Left" FontSize="15"  VerticalAlignment="Top" Checked="rdInd_Selected" Width="105" Margin="193,4,0,0"/>
+        </Grid>
+        <Grid Margin="50,202,409,392">
+            <RadioButton x:Name="rdMbRead" Content="Read" HorizontalAlignment="Left" IsChecked="True" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+            <RadioButton x:Name="rdMbWrite" Content="Write" HorizontalAlignment="Left" Margin="197,2,0,0" IsChecked="False" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+
+        </Grid>
 
     </Grid>
 </Window>

@@ -346,30 +346,7 @@ namespace ftpMassUpgrade// ftpMainWindow
 
         public void btTest_Click(object sender, RoutedEventArgs e)
         {
-            //int mod = 255 % 10;
-            //int div = 255 / 10;
-            //MessageBox.Show(mod.ToString());
-            //MessageBox.Show(div.ToString());
-            //lbIConStatus.Content += mod.ToString();
-            // PostDatatoFTP(0);
-            // btTest.IsEnabled = false;
-            //ftpupgrade.startUpgradeTask();
-            // upgrdThread = new Thread(new ThreadStart(mWin.PostDatatoFTP));
-            //upgrdThread.Start();
-            //string IP = "192.168.2.114";
-            //long IPA;
-            //tcpUitility uitility = new tcpUitility();
-            //IPA = uitility.IP2LongEndianLess(IP);
-            //MessageBox.Show(IPA.ToString());
-            //IPA++;
-            //IP = uitility.LongToIP(IPA);
-            //MessageBox.Show(IP);
-
-            //winUpdateCntrl[0].pb.Maximum = 10;
-            //winUpdateCntrl[0].pb.Minimum = 1;
-            //winUpdateCntrl[0].pb.Value = 0;
-
-            //winUpdateCntrl[0].lb.Content = "192.168.2.101";
+            this.Close();
 
 
         }
@@ -378,6 +355,32 @@ namespace ftpMassUpgrade// ftpMainWindow
         private void btMbAccess_Click(object sender, RoutedEventArgs e)
         {
             ModbusAccess mbAccessWin = new ModbusAccess();
+            int lstSize = mbAccessWin.getDeviceListSize();
+            try
+            {
+                int selectedLst = grdDeviceList.SelectedItems.Count;
+
+                if (selectedLst < 1)
+                {
+                    mbAccessWin.rdInd.IsChecked = true;
+                }
+                else
+                {
+                    mbAccessWin.rdAll.IsChecked = true;
+                }
+
+                int lstCnt = (lstSize > selectedLst) ? selectedLst : lstSize;
+                mbAccessWin.nDevice = lstCnt;
+                for (int i = 0; i < lstCnt; i++)
+                {
+                    //deviceEntry devEnt = new deviceEntry();
+                    mbAccessWin.deviceList[i]= (deviceEntry) grdDeviceList.SelectedItems[i];
+                }
+            }
+            catch (excepetion ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             mbAccessWin.Show();         
         }
 
